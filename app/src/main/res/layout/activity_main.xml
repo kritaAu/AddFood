@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/caloriesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Calories: 0"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/foodNameInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Food Name"
+        android:layout_below="@id/caloriesTextView"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
+
+    <EditText
+        android:id="@+id/foodCaloriesInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Calories"
+        android:inputType="number"
+        android:layout_below="@id/foodNameInput"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
+
+    <Button
+        android:id="@+id/addFoodButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Food"
+        android:layout_below="@id/foodCaloriesInput"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:onClick="addFood"/>
+
+    <!-- เพิ่มปุ่ม "View Food List" -->
+    <Button
+        android:id="@+id/viewFoodListButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Food List"
+        android:layout_below="@id/addFoodButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:onClick="showFoodList" />
+
+    <ListView
+        android:id="@+id/foodListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewFoodListButton"
+        android:layout_marginTop="16dp"/>
+</RelativeLayout>
